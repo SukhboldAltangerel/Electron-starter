@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 module.exports = {
   /**
    * This is the main entry point for your application, it's the first file
@@ -7,5 +9,5 @@ module.exports = {
   // Put your normal webpack config below here
   module: {
     rules: require('./webpack.rules'),
-  },
-};
+  }
+}

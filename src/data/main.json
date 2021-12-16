@@ -1,0 +1,24 @@
+[
+   {
+      "name": "tea",
+      "price": 5000,
+      "types": [
+         "green",
+         "black",
+         "gray",
+         "oolong",
+         "lemon"
+      ],
+      "image": "src/assets/main/tea.png"
+   },
+   {
+      "name": "milk",
+      "price": 6500,
+      "image": "src/assets/main/milk.png"
+   },
+   {
+      "name": "juice",
+      "price": 6000,
+      "image": "src/assets/main/juice.png"
+   }
+]

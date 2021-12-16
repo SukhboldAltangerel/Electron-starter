@@ -1,6 +1,7 @@
 /* eslint-disable */
 
 const rules = require('./webpack.rules')
+const path = require('path')
 
 rules.push({
   test: /\.css$/,
@@ -14,5 +15,8 @@ module.exports = {
   },
   resolve: {
     preferRelative: true,
-  },
+    alias: {
+      'src': path.resolve(__dirname, 'src')
+    }
+  }
 }
