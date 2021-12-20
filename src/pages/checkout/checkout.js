@@ -14,7 +14,13 @@ const dummyProduct = {
 }
 
 export default function Checkout() {
-   const [checklist, setChecklist] = useState([dummyProduct])
+   const [checklist, setChecklist] = useState([])
+   const [focusedIndex, setFocusedIndex] = useState()
+
+   function addProduct(product) {
+      const add = (({ name, price }) => ({ name, price }))(product)
+      setChecklist(prev => [...prev, add])
+   }
 
    return (
       <div className={styles.page}>
@@ -53,7 +59,7 @@ export default function Checkout() {
             </div>
             <div className={styles.productsContainer}>
                {main.map((product, i) =>
-                  <div className={styles.product} key={i}>
+                  <div className={styles.product} key={i} onClick={() => addProduct(product)}>
                      <div className={styles.productName}>
                         {product.name}
                      </div>
