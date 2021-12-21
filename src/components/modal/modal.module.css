@@ -1,0 +1,17 @@
+.modal {
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   animation: scaleIn 300ms;
+}
+
+@keyframes scaleIn {
+   0% {
+      transform: scale(0);
+   }
+
+   100% {
+      transform: scale(1)
+   }
+}

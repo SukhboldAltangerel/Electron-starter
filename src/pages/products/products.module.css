@@ -1,0 +1,19 @@
+.page {}
+
+.productsContainer {
+   margin-top: 24px;
+}
+
+.product {
+   display: flex;
+   column-gap: 36px;
+}
+
+.addonsContainer {
+   margin-top: 24px;
+}
+
+.addon {
+   display: flex;
+   column-gap: 36px;
+}
