@@ -52,7 +52,12 @@ export default function Checkout() {
 
    function checkout() {
       setChecklist([])
-      setModal({ open: true })
+      setModal({
+         open: true,
+         content: <div style={{ width: 240, height: 120, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+            Testind modal animation
+         </div>
+      })
    }
 
    return (

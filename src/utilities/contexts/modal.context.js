@@ -4,7 +4,10 @@ const ModalContext = createContext()
 
 // eslint-disable-next-line react/prop-types
 export function ModalStore({ children }) {
-   const [modal, setModal] = useState({})
+   const [modal, setModal] = useState({
+      open: false,
+      content: null
+   })
 
    const value = useMemo(() => ({ modal, setModal }), [modal])
 

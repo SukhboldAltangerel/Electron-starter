@@ -1,9 +1,53 @@
-.modal {
+@value duration: 300ms;
+
+.background {
    position: fixed;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-   animation: scaleIn 300ms;
+   top: 0;
+   left: 0;
+   width: 100vw;
+   height: 100vh;
+   z-index: 100;
+   background-color: rgba(0, 0, 0, 0.4);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   animation: fadeIn duration forwards;
+}
+
+.backgroundFadeOut {
+   animation: fadeOut duration forwards;
+}
+
+.modal {
+   z-index: 101;
+   border-radius: 8px;
+   box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+   background-color: white;
+   animation: scaleIn duration forwards;
+}
+
+.modalScaleOut {
+   animation: scaleOut duration forwards;
+}
+
+@keyframes fadeIn {
+   0% {
+      backdrop-filter: blur(0px);
+   }
+
+   100% {
+      backdrop-filter: blur(2px);
+   }
+}
+
+@keyframes fadeOut {
+   0% {
+      backdrop-filter: blur(2px);
+   }
+
+   100% {
+      backdrop-filter: blur(0px);
+   }
 }
 
 @keyframes scaleIn {
@@ -12,6 +56,16 @@
    }
 
    100% {
-      transform: scale(1)
+      transform: scale(1);
+   }
+}
+
+@keyframes scaleOut {
+   0% {
+      transform: scale(1);
+   }
+
+   100% {
+      transform: scale(0);
    }
 }
