@@ -23,11 +23,11 @@
    border-radius: 8px;
    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
    background-color: white;
-   animation: scaleIn duration forwards;
+   animation: scaleIn duration ease-out forwards;
 }
 
 .modalScaleOut {
-   animation: scaleOut duration forwards;
+   animation: scaleOut duration ease-out forwards;
 }
 
 @keyframes fadeIn {
@@ -53,19 +53,23 @@
 @keyframes scaleIn {
    0% {
       transform: scale(0);
+      opacity: 0;
    }
 
    100% {
       transform: scale(1);
+      opacity: 1;
    }
 }
 
 @keyframes scaleOut {
    0% {
       transform: scale(1);
+      opacity: 1;
    }
 
    100% {
       transform: scale(0);
+      opacity: 0;
    }
 }

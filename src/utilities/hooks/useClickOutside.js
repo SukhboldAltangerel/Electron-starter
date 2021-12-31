@@ -10,5 +10,5 @@ export default function useClickOutside(refsArray, condition, callback) {
    useEffect(() => {
       document.addEventListener('mousedown', handleClick)
       return () => document.removeEventListener('mousedown', handleClick)
-   }, [])
+   })
 }
