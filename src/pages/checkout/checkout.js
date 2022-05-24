@@ -55,7 +55,7 @@ export default function Checkout() {
       setModal({
          open: true,
          content: <div style={{ width: 240, height: 120, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-            Testind modal animation
+            Testing modal animation
          </div>
       })
    }
